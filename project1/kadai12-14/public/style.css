@@ -1,0 +1,53 @@
+header{
+	display: flex;
+	padding: auto;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* 写真一覧の全体コンテナ */
+.photo-list-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 10px;
+}
+
+/* 各写真アイテムの設定 */
+.photo-item {
+	flex: 0 0 calc(33.333% - 13.333px);
+	min-width: 250px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+/* 画像自体の調整 */
+.photo-item img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+/* 投票ボタンのフォーム */
+.photo-item form {
+	margin-top: 10px;
+}
+
+/* レスポンシブ対応 (例: 画面幅が600px以下になったら2列にする) */
+@media (max-width: 900px) {
+	.photo-item {
+		/* 2列表示に切り替え */
+		flex: 0 0 calc(50% - 10px);
+	}
+}
+
+@media (max-width: 600px) {
+	.photo-item {
+		/* 1列表示に切り替え */
+		flex: 1 1 100%;
+	}
+}
